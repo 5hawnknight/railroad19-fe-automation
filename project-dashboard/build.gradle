@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+    id 'idea'
+}
+
+sourceCompatibility = 1.11
+targetCompatibility = 1.11
+
+dependencies {
+    compile project(':shared-selenium-core')
+}
+
+test {
+    systemProperties['env.url'] = java.util.Optional.ofNullable(System.getProperty('env.url')).orElse('local')
+    systemProperties['browser']  = java.util.Optional.ofNullable(System.getProperty('browser')).orElse('unknown browser')
+    
+    useTestNG() {
+        suites "src/test/resources/tests.xml"
+    }
+}

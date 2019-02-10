@@ -1,0 +1,4 @@
+rootProject.name = 'railroad19-fe-automation'
+
+include 'project-dashboard'
+include 'shared-selenium-core'

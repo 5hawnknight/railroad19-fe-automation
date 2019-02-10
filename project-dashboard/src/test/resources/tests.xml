@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Project Dashboard Test" parallel="tests" thread-count="2" verbose="1">
+
+    <test name="Project Dashboard | Visual | Dashboard Page">
+        <parameter name="description" value="given an user when viewing the dashboard page then it should validate correctly against the baseline image"/>
+        <classes>
+            <class name="com.rr19.tests.visual.DashboardPage"/>
+        </classes>
+    </test>
+
+    <test name="Project Dashboard | Visual | Statistics Card">
+        <parameter name="description" value="given an user when viewing the Statistics section then it should validate correctly against the baseline image"/>
+        <classes>
+            <class name="com.rr19.tests.visual.StatisticsCard"/>
+        </classes>
+    </test>
+
+    <test name="Project Dashboard | Visual | Search Card">
+        <parameter name="description" value="given an user when viewing the Search section then it should validate correctly against the baseline image"/>
+        <classes>
+            <class name="com.rr19.tests.visual.SearchCard"/>
+        </classes>
+    </test>
+
+    <test name="Project Dashboard | Visual | Record Card">
+        <parameter name="description" value="given an user when viewing a Record then it should validate correctly against the baseline image"/>
+        <parameter name="record.title" value="Kimia"/>
+        <classes>
+            <class name="com.rr19.tests.visual.RecordTitle"/>
+        </classes>
+    </test>
+
+    <test name="Project Dashboard | Functional | Update Record Card">
+        <parameter name="description" value="given an user when updating the Record's Project Owner then the Record should indicate the new project owner"/>
+        <parameter name="record.title" value="Aibox"/>
+        <classes>
+            <class name="com.rr19.tests.functional.UpdateRecord"/>
+        </classes>
+    </test>
+
+    <test name="Project Dashboard | Visual | Update User Message">
+        <parameter name="description" value="given an user when updating the Record's Project Owner then the application should display an user message"/>
+        <parameter name="record.title" value="Oyoyo"/>
+        <classes>
+            <class name="com.rr19.tests.visual.UpdateUserMessage"/>
+        </classes>
+    </test>
+
+    <test name="Project Dashboard | Visual | Simple Search">
+        <parameter name="description" value="given an user when searching then it should display the correct Records"/>
+        <parameter name="term" value="new"/>
+        <classes>
+            <class name="com.rr19.tests.visual.SimpleSearch"/>
+        </classes>
+    </test>
+
+</suite>
