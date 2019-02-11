@@ -4,7 +4,8 @@
 #### Required software
 Java 11+<br>
 Gradle 5+<br>
-This version of Project Dashboard (https://github.com/5hawnknight/railroad19-fe-app)
+This version of [Project Dashboard](https://github.com/5hawnknight/railroad19-fe-app) <br>
+This version has the automation locator hooks 
 <hr>
 
 #### Tooling Accounts
